@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
     <meta charset="UTF-8" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <title>Dice Roll</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,11 +11,9 @@
     <script src="script.js"></script>
 
     <div class="button-container">
-        <button onclick="snd.play()" id="myButton">Roll</button>
-        <button id="resetButton">Reset High Score</button>
+        <button class="medieval-button" onclick="snd.play()" id="myButton">Roll</button>
+        <button class="medieval-button" id="resetButton">Reset High Score</button>
     </div>
-
-
 
     <p1>Two Six Sided Dice</p1>
     <p id="clickCount">Dice 1:</p>
@@ -28,6 +23,6 @@
   </body>
 
   <script>
-    let snd = new Audio("/home/andy/Documents/code/blank_JS/sounds/dice.mp3");
+    let snd = new Audio("/home/andy/Documents/code/dice_roll/sounds/dice.mp3");
   </script>
 </html>
