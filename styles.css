@@ -1,0 +1,60 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+p1 {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #333;
+    font-weight: bold; /* Makes the text bold */
+    text-decoration: underline; /* Underlines the text */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px; /* Space below the buttons */
+    width: 100%; /* Make sure the container takes the full width */
+    padding-left: 5px; /* Add left padding for alignment */
+}
+
+.button-container button {
+    font-size: 16px; /* Adjusted button font size */
+}
