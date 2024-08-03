@@ -42,7 +42,7 @@ p1 {
     margin-top: 10px;
     font-size: 30px;
     color: #ffffff; /* Light text color */
-    font-weight: bold; /* Makes the text bold */
+/*    font-weight: bold; /* Makes the text bold */
     text-decoration: underline; /* Underlines the text */
 }
 

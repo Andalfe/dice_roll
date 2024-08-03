@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const myButton = document.getElementById("myButton");
     const resetButton = document.getElementById("resetButton");
+
     const clickCount = document.getElementById("clickCount");
     const clickCount1 = document.getElementById("clickCount1");
+    
     const clickSum = document.getElementById("clickSum");
     const highScore = document.getElementById("highScore");
 
