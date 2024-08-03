@@ -1,16 +1,16 @@
-/* styles.css */
 body {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #f0f0f0;
 }
 
 h1 {
-    color: #333;
+    color: #ffffff; /* Light text color */
     text-align: center;
     width: 100%;
     margin: 0;
@@ -35,13 +35,13 @@ button:hover {
 p {
     margin-top: 10px;
     font-size: 20px;
-    color: #333;
+    color: #ffffff; /* Light text color */
 }
 
 p1 {
     margin-top: 10px;
     font-size: 30px;
-    color: #333;
+    color: #ffffff; /* Light text color */
     font-weight: bold; /* Makes the text bold */
     text-decoration: underline; /* Underlines the text */
 }
@@ -59,7 +59,6 @@ p1 {
     font-size: 16px; /* Adjusted button font size */
 }
 
-
 .medieval-button {
     padding: 10px 20px;
     background-color: #795649; /* A dark wood-like brown */
@@ -72,14 +71,14 @@ p1 {
     border-radius: 4px; /* Slightly rounded corners */
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .medieval-button:hover {
+}
+
+.medieval-button:hover {
     background-color: #8a6e2f; /* A lighter, worn wood color for hover */
     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3); /* A more pronounced shadow for hover */
-  }
-  
-  .medieval-button:active {
+}
+
+.medieval-button:active {
     box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.5); /* An inset shadow for a pressed effect */
     transform: translateY(2px); /* Moves the button down to simulate a press */
-  }
+}
