@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const lowScore = document.getElementById("lowScore");
 
     myButton.addEventListener("click", () => {
-        // Generate random dice rolls (1-6)
-        // count = Math.floor(Math.random() * 6) + 1;
-        // count1 = Math.floor(Math.random() * 6) + 1;
 
         let dropdown_1 = document.getElementById("diceDropdown_1").value;
         let dropdown_2 = document.getElementById("diceDropdown_2").value;
@@ -25,23 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         function rollDie(dropdownValue) {
+          const randDice = (upperLimit) => Math.floor(Math.random() * upperLimit) + 1;
             switch (dropdownValue) {
                 case "1":
-                    return Math.floor(Math.random() * 4) + 1;
+                    return randDice(4);
                 case "2":
-                    return Math.floor(Math.random() * 6) + 1;
+                    return randDice(6);
                 case "3":
-                    return Math.floor(Math.random() * 8) + 1;
+                    return randDice(8);
                 case "4":
-                    return Math.floor(Math.random() * 10) + 1;
+                    return randDice(10);
                 case "5":
-                    return Math.floor(Math.random() * 12) + 1;
+                    return randDice(12);
                 case "6":
-                    return Math.floor(Math.random() * 20) + 1;
+                    return randDice(20);
                 case "7":
-                    return Math.floor(Math.random() * 100) + 1;
+                    return randDice(100);
                 default:
-                    return "None"; // Default case if no match is found
+                    return 0; // Default case if no match is found
             }
         }
 
