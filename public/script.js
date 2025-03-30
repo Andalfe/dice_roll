@@ -100,4 +100,3 @@ window.onerror = function (message, source, lineno, colno, error) {
     // You can also log to the console for debugging
     console.error("Client-side error:", errorDetails);
 };
-
