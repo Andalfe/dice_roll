@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", () => {
     let highScore_num = 0;
     let lowScore_num = Infinity;
