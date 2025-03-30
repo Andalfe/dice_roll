@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Use the value here if needed for other logic
                 console.log("Dice 1 selected:", dice1Value);
             }
-            var dropdown_2 = document.getElementById("diceDropdown_2");
             var dice2Value = "0";
             if (dropdown_2) {
                 dice2Value = dropdown_2.value;

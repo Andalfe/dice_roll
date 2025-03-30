@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Load index.html from the local filesystem
-const filePath = path.resolve(__dirname, "./public/index.html");
+const filePath = path.resolve(__dirname, "./index.html");
 const htmlContent = fs.readFileSync(filePath, "utf8");
 
 // Create a JSDOM instance from the file
@@ -18,4 +18,4 @@ global.window.console.log = (...args) => console.log("[JSDOM]", ...args);
 
 
 // Import and execute your script
-require("./public/script.js");
+require("./script.js");

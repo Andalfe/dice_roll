@@ -1,6 +1,3 @@
-// the below file creates a server to log the errors to the terminal
-
-
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
@@ -16,18 +13,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Assuming index.html is in the public folder
 });
 
 // Capture and log client-side errors sent via POST requests
 app.post('/logError', express.json(), (req, res) => {
-    console.error("Client-side Error:", req.body);  // Log the client-side error to terminal
+    console.error("Client-side Error:");
+    console.error(req.body); // Log the entire error object
     res.status(200).send('Error logged');
 });
 
 // Set up an error handler to capture server-side errors
 app.use((err, req, res, next) => {
-    console.error('Server-side Error:', err.message);  // Log server-side errors
+    console.error('Server-side Error:', err.message); // Log server-side errors
     res.status(500).send('Something went wrong! Check the server logs.');
 });
 
