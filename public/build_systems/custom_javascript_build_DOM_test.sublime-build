@@ -1,0 +1,8 @@
+{
+    "cmd": ["node", "${file_path}/test.js"],
+    "file_patterns": ["*.js"],
+    "working_dir": "${project_path}",
+    "target": "terminus_exec",
+    "cancel": "terminus_cancel_build",
+    "selector": ["source.js"]
+}

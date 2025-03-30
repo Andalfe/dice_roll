@@ -1,0 +1,12 @@
+{
+    "cmd": [
+        "bash",
+        "-c",
+        "tsc ${project_path:${folder}}/public/script.ts --outFile ${project_path:${folder}}/public/dist/script.js --noEmitOnError && cp ${project_path:${folder}}/public/index.html ${project_path:${folder}}/public/dist/index.html && cp ${project_path:${folder}}/public/styles.css ${project_path:${folder}}/public/dist/styles.css && cp ${project_path:${folder}}/public/test.js ${project_path:${folder}}/public/dist/test.js"
+    ],
+    "working_dir": "${project_path:${folder}}",
+    "target": "terminus_exec",
+    "cancel": "terminus_cancel_build",
+    "selector": "source.ts",
+    "file_patterns": ["public/script.ts", "src/script.ts"]
+}
