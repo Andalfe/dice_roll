@@ -1,23 +1,21 @@
-    switch (dropdown_1) {
-        case 1:
-            count = Math.floor(Math.random() * 4) + 1;
-            break;
-        case 2:
-            count = Math.floor(Math.random() * 6) + 1;
-            break;
-        case 3:
-            count = Math.floor(Math.random() * 8) + 1;            
-            break;
-        case 4:
-            count = Math.floor(Math.random() * 10) + 1;            
-            break;
-        case 5:
-            count = Math.floor(Math.random() * 12) + 1;            
-            break;
-        case 6:
-            count = Math.floor(Math.random() * 20) + 1;            
-            break;
-        case 7:
-            count = Math.floor(Math.random() * 100) + 1;            
-            break;
-  }
+// the below file creates a fake DOM in order to comile the javascript locally to find syntax errrors/
+
+const { JSDOM } = require("jsdom");
+const fs = require("fs");
+const path = require("path");
+
+// Load index.html from the local filesystem
+const filePath = path.resolve(__dirname, "./public/index.html");
+const htmlContent = fs.readFileSync(filePath, "utf8");
+
+// Create a JSDOM instance from the file
+const dom = new JSDOM(htmlContent, { runScripts: "dangerously", resources: "usable" });
+
+// Set global window and document
+global.window = dom.window;
+global.document = dom.window.document;
+global.window.console.log = (...args) => console.log("[JSDOM]", ...args);
+
+
+// Import and execute your script
+require("./public/script.js");
