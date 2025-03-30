@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Roll</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="button-container">
+        <audio id="dice" src="sounds/dice.mp3" preload="auto"></audio>
+        <button class="medieval-button" onclick="playSound()" id="myButton">
+            Roll Dice
+        </button>
+        <button class="medieval-button" id="resetButton">
+      Reset High Score
+    </button>
+    </div>
+    <p>Two Six Sided Dice</p>
+    <div>
+        <p id="clickCount">Dice 1:</p>
+        <select id="diceDropdown_1">
+            <option value="1">d4 (Four-Sided Die)</option>
+            <option value="2">d6 (Six-Sided Die)</option>
+            <option value="3">d8 (Eight-Sided Die)</option>
+            <option value="4">d10 (Ten-Sided Die)</option>
+            <option value="5">d12 (Twelve-Sided Die)</option>
+            <option value="6">d20 (Twenty-Sided Die)</option>
+            <option value="7">d100 (Percentile Dice)</option>
+            <option value="8">No Dice</option>
+        </select>
+    </div>
+    <span>
+        <p id="clickCount1">Dice 2:</p>
+        <select id="diceDropdown_2">
+            <option value="1">d4 (Four-Sided Die)</option>
+            <option value="2">d6 (Six-Sided Die)</option>
+            <option value="3">d8 (Eight-Sided Die)</option>
+            <option value="4">d10 (Ten-Sided Die)</option>
+            <option value="5">d12 (Twelve-Sided Die)</option>
+            <option value="6">d20 (Twenty-Sided Die)</option>
+            <option value="7">d100 (Percentile Dice)</option>
+            <option value="8">No Dice</option>
+        </select>
+    </span>
+    <p id="clickSum">Sum:</p>
+    <p id="highScore">High Score:</p>
+    <p id="lowScore">Low Score:</p>
+</body>
+
+</html>
