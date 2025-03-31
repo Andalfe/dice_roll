@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     case "5": return randDice(12);
                     case "6": return randDice(20);
                     case "7": return randDice(100);
-                    default: return 0;
+                    case "8": return 0;
                 }
             }
 
