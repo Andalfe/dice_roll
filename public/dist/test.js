@@ -1,21 +1,23 @@
-// the below file creates a fake DOM in order to comile the javascript locally to find syntax errrors/
-
 const { JSDOM } = require("jsdom");
-const fs = require("fs");
-const path = require("path");
 
-// Load index.html from the local filesystem
-const filePath = path.resolve(__dirname, "./index.html");
-const htmlContent = fs.readFileSync(filePath, "utf8");
+// Create a simple HTML structure with a Hello World paragraph
+const htmlContent = `
+  <!DOCTYPE html>
+  <html>
+  <head><title>Test</title></head>
+  <body>
+    <p>Hello, World!</p>
+  </body>
+  </html>
+`;
 
-// Create a JSDOM instance from the file
+// Create a JSDOM instance from the HTML string
 const dom = new JSDOM(htmlContent, { runScripts: "dangerously", resources: "usable" });
 
 // Set global window and document
 global.window = dom.window;
 global.document = dom.window.document;
 global.window.console.log = (...args) => console.log("[JSDOM]", ...args);
-
 
 // Import and execute your script
 require("./script.js");

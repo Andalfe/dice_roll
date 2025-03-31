@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const dropdown_2 = document.getElementById("diceDropdown_2") as HTMLSelectElement | null;
             let dice2Value = "0";
             if (dropdown_2) {
-                dice2Value = dropdown_2.value;
+                dice2Value = dropdown_2.value; 
                 // Use the value here if needed for other logic
                 console.log("Dice 2 selected:", dice2Value);
             }
