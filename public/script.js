@@ -1,6 +1,9 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
     let highScore_num = 0;
     let lowScore_num = Infinity;
 
@@ -60,17 +63,6 @@ function playSound() {
     audio.currentTime = 0; // Reset the audio playback position
     audio.play(); // Play the sound
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
